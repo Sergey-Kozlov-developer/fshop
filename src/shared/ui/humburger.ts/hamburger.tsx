@@ -1,23 +1,16 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/shared/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/shared/ui/sheet";
-import type { ReactNode } from "react";
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetTitle,
+    SheetTrigger,
+} from "@/shared/ui/sheet";
+import type { IHamburgerMenuProps } from "@/shared/ui/types/ui";
+import { useState } from "react";
+
 import { Link } from "react-router";
-
-export interface IHamburgerMenuListNav {
-    id: number;
-    path: string;
-    title: string;
-    icon?: ReactNode;
-}
-
-export interface IHamburgerMenuProps {
-    icon: ReactNode;
-    listNav: IHamburgerMenuListNav[];
-    triggerClassName?: string;
-    contentClassName?: string;
-    onItemClick?: () => void;
-}
 
 const HamburgerMenu = ({
     icon,
@@ -26,11 +19,14 @@ const HamburgerMenu = ({
     contentClassName,
     onItemClick,
 }: IHamburgerMenuProps) => {
+    const [open, setOpen] = useState(false);
+
     const handleItemClick = () => {
+        setOpen(false);
         onItemClick?.();
     };
     return (
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
                 <Button
                     variant="ghost"
@@ -43,9 +39,11 @@ const HamburgerMenu = ({
             </SheetTrigger>
             <SheetContent
                 side="right"
-                className={cn("w-[300px] sm:w-[400px]", contentClassName)}
+                className={cn("w-75 sm:w-100", contentClassName)}
             >
                 <nav className="flex flex-col space-y-2 mt-8">
+                    <SheetTitle />
+                    <SheetDescription />
                     {listNav.map((item) => (
                         <Link
                             key={item.id}
