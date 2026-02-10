@@ -121,3 +121,17 @@
         @apply bg-background text-foreground;
     }
 }
+@layer components {
+    /* кнопка для swiper prev */
+    .image-swiper-button-prev {
+        @apply absolute text-white hover:text-slate-500 left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
+    }
+    /* кнопка для swiper next */
+    .image-swiper-button-next {
+        @apply absolute text-white hover:text-slate-500 right-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
+    }
+    /* кнопка Shop Now на слайдере */
+    .button-details {
+        @apply border-none bg-white hover:bg-neutral-400 text-neutral-700 hover:text-white font-semibold py-2 md:py-3 px-6 md:px-8 rounded-lg text-sm md:text-base transition duration-300;
+    }
+}
