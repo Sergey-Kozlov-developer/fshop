@@ -124,7 +124,7 @@
 @layer components {
     /* кнопка для swiper prev */
     .image-swiper-button-prev {
-        @apply absolute text-white hover:text-slate-500 left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
+        @apply absolute text-white hover:text-slate-500 sm:left-0 md:left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
     }
     /* кнопка для swiper next */
     .image-swiper-button-next {
