@@ -124,14 +124,30 @@
 @layer components {
     /* кнопка для swiper prev */
     .image-swiper-button-prev {
-        @apply absolute text-white hover:text-slate-500 sm:left-0 md:left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
+        @apply absolute z-20 flex items-center justify-center text-white transition-all duration-300 -translate-y-1/2 bg-transparent rounded-full cursor-pointer hover:text-slate-500 sm:left-0 md:left-4 top-1/2 w-14 h-14 hover:bg-slate-100;
     }
     /* кнопка для swiper next */
     .image-swiper-button-next {
-        @apply absolute text-white hover:text-slate-500 right-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer w-14 h-14 bg-transparent hover:bg-slate-100 rounded-full flex items-center justify-center transition-all duration-300;
+        @apply absolute z-20 flex items-center justify-center text-white transition-all duration-300 -translate-y-1/2 bg-transparent rounded-full cursor-pointer hover:text-slate-500 right-4 top-1/2 w-14 h-14 hover:bg-slate-100;
     }
     /* кнопка Shop Now на слайдере */
     .button-details {
-        @apply border-none bg-white hover:bg-neutral-400 text-neutral-700 hover:text-white font-semibold py-2 md:py-3 px-6 md:px-8 rounded-lg text-sm md:text-base transition duration-300;
+        @apply px-6 py-2 text-sm font-semibold transition duration-300 bg-white border-none rounded-lg hover:bg-neutral-400 text-neutral-700 hover:text-white md:py-3 md:px-8 md:text-base;
+    }
+    /* Стили для пагинации Swiper */
+    .swiper-pagination {
+        @apply absolute z-30 flex justify-center space-x-2 -translate-x-1/2 bottom-4 left-1/2;
+        pointer-events: auto;
+    }
+
+    .swiper-pagination-bullet {
+        @apply relative w-2 h-2 rounded-full opacity-100 cursor-pointer sm:w-3 sm:h-3 bg-white/70;
+        z-index: 31;
+        pointer-events: auto;
+        cursor: pointer !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        @apply opacity-100;
     }
 }

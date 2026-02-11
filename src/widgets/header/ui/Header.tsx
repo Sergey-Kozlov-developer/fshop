@@ -3,15 +3,15 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-} from "@/shared/ui/navigation-menu";
+} from "@/shared/ui/shadcn/navigation-menu";
 import { Link } from "react-router";
 import {
     InputGroup,
     InputGroupAddon,
     InputGroupInput,
-} from "@/shared/ui/input-group";
+} from "@/shared/ui/shadcn/input-group";
 import { HeartIcon, SearchIcon, ShoppingCart, UserIcon } from "lucide-react";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/ui/shadcn/button";
 import logo from "@/shared/assets/image/logo.png";
 import HamburgerMenu from "@/shared/ui/humburger.ts/hamburger";
 import { MenuIcon } from "lucide-react";

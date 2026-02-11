@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/ui/shadcn/button";
 import {
     Sheet,
     SheetContent,
     SheetDescription,
     SheetTitle,
     SheetTrigger,
-} from "@/shared/ui/sheet";
+} from "@/shared/ui/shadcn/sheet";
 import type { IHamburgerMenuProps } from "@/shared/ui/types/ui";
 import { useState } from "react";
 
