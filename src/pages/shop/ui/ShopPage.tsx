@@ -5,7 +5,7 @@ const ShopPage = () => {
     return (
         <div className="w-full">
             <SwiperSlider />
-            <div className="container mx-auto mt-32 mb-24">
+            <div className="container mx-auto mb-24 max-sm:mt-14 sm:mt-20 lg:mt-32">
                 <PromoCards />
             </div>
         </div>

@@ -30,14 +30,14 @@ const PromoCards = () => {
                         src={item.img}
                         alt="Promo 1"
                     />
-                    <div className="absolute justify-start max-sm:top-4 sm:top-16 left-7 ">
-                        <p className="mb-6 text-white text-lg font-extrabold font-['Montserrat'] leading-8 tracking-tight">
+                    <div className="absolute justify-start max-sm:top-8 sm:top-16 md:top-6 lg:top-16 xl:top-32 left-7 ">
+                        <p className="max-sm:mb-2.5 mb-6 text-white text-lg font-extrabold font-['Montserrat'] leading-8 tracking-tight">
                             {item.article}
                         </p>
-                        <p className="mb-2 text-white text-4xl font-extrabold font-['Core_Sans_C'] leading-10">
+                        <p className="mb-2 text-white text-4xl font-extrabold font-['Core_Sans_C'] max-sm:text-2xl md:text-4xl leading-10">
                             {item.title}
                         </p>
-                        <p className="max-sm:mb-5 sm:mb-10  text-white text-base font-medium font-['Core_Sans_C'] leading-6 tracking-tight">
+                        <p className="max-sm:mb-2 max-md:mb-2  text-white text-base font-medium font-['Core_Sans_C']  leading-6 tracking-tight">
                             {item.promoPrice}
                         </p>
                         <p className=" text-white text-xl font-extrabold font-['Core_Sans_C'] underline leading-8">
