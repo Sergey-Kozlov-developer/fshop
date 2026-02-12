@@ -13,7 +13,7 @@ import {
 import { HeartIcon, SearchIcon, ShoppingCart, UserIcon } from "lucide-react";
 import { Button } from "@/shared/ui/shadcn/button";
 import logo from "@/shared/assets/image/logo.png";
-import HamburgerMenu from "@/shared/ui/humburger.ts/hamburger";
+import HamburgerMenu from "@/shared/ui/humburger/hamburger";
 import { MenuIcon } from "lucide-react";
 
 const Header = () => {

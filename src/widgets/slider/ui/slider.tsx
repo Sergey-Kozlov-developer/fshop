@@ -1,13 +1,11 @@
 import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import sliderOne from "@/shared/assets/image/slider/slider-2.png";
 import sliderTwo from "@/shared/assets/image/slider/slider-1.png";
-import ButtonPrevIcon from "@/widgets/slider/ButtonPrevIcon";
-import ButtonNextIcon from "@/widgets/slider/ButtonNextIcon";
+import ButtonPrevIcon from "@/widgets/slider/ui/ButtonPrevIcon";
+import ButtonNextIcon from "@/widgets/slider/ui/ButtonNextIcon";
 
 const SwiperSlider = () => {
     return (
@@ -18,7 +16,6 @@ const SwiperSlider = () => {
                     navigation={{
                         nextEl: ".image-swiper-button-next",
                         prevEl: ".image-swiper-button-prev",
-                        // disabledClass: "swiper-button-disabled",
                     }}
                     modules={[Navigation, Pagination]}
                     pagination={{

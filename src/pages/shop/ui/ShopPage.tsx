@@ -1,6 +1,6 @@
 import PromoCollection from "@/pages/shop/ui/blocks/PromoCollection";
-import PromoCards from "@/widgets/promo-cards/promoCards";
-import SwiperSlider from "@/widgets/slider/slider";
+import PromoCards from "@/widgets/promo-cards/ui/promoCards";
+import SwiperSlider from "@/widgets/slider/ui/slider";
 
 const ShopPage = () => {
     return (

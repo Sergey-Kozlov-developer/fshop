@@ -32,7 +32,6 @@ const PromoCarousel = () => {
         <Carousel className="w-full max-sm:px-5 sm:px-0">
             <CarouselContent className="-ml-1">
                 {itemsCard.map((item) => (
-                    // <CarouselItem key={item.id} className="pl-1 basis-1/4 ">
                     <CarouselItem
                         key={item.id}
                         className="pl-1 
