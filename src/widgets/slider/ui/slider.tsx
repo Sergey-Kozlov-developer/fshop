@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import sliderOne from "@/shared/assets/image/slider/slider-2.png";
 import sliderTwo from "@/shared/assets/image/slider/slider-1.png";
-import ButtonPrevIcon from "@/widgets/slider/ui/ButtonPrevIcon";
-import ButtonNextIcon from "@/widgets/slider/ui/ButtonNextIcon";
+import ButtonPrevIcon from "@/widgets/slider/ui/button-prev-icon";
+import ButtonNextIcon from "@/widgets/slider/ui/button-next-icon";
 
-const SwiperSlider = () => {
+export const SwiperSlider = () => {
     return (
         <>
             <div className="relative w-full ">
@@ -129,4 +129,3 @@ const SwiperSlider = () => {
         </>
     );
 };
-export default SwiperSlider;

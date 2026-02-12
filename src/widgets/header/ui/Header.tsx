@@ -16,7 +16,7 @@ import logo from "@/shared/assets/image/logo.png";
 import HamburgerMenu from "@/shared/ui/humburger/hamburger";
 import { MenuIcon } from "lucide-react";
 
-const Header = () => {
+export const Header = () => {
     const navs = [
         { id: 1, path: "/", title: "Shop" },
         { id: 2, path: "/men", title: "Men" },
@@ -112,5 +112,3 @@ const Header = () => {
         </header>
     );
 };
-
-export default Header;

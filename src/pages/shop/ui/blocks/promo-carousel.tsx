@@ -16,7 +16,7 @@ import girlStyleImg from "@/shared/assets/image/promo-collection/girl-style.jpg"
 import swimmerImg from "@/shared/assets/image/promo-collection/swimmer.jpg";
 import styleImg from "@/shared/assets/image/promo-collection/style.jpg";
 
-const PromoCarousel = () => {
+const NewArrivalCarousel = () => {
     const itemsCard = [
         { id: 1, img: joggerImg, article: "Knitted Joggers" },
         { id: 2, img: sleeveImg, article: "Full Sleeve" },
@@ -64,4 +64,4 @@ const PromoCarousel = () => {
     );
 };
 
-export default PromoCarousel;
+export default NewArrivalCarousel;
