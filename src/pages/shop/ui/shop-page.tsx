@@ -4,7 +4,7 @@ import PromoCards from "@/widgets/promo-cards/ui/promo-cards";
 import SavingZone from "@/widgets/saving-zone/ui/saving-zone";
 import { SwiperSlider } from "@/widgets/slider";
 
-const ShopPage = () => {
+export const ShopPage = () => {
     return (
         <div className="w-full">
             <SwiperSlider />
@@ -27,5 +27,3 @@ const ShopPage = () => {
         </div>
     );
 };
-
-export default ShopPage;

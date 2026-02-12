@@ -1,9 +1,11 @@
 import LayoutApp from "@/app/layout/LayoutApp";
-import CombosPage from "@/pages/combos/ui/CombosPage";
-import JoggersPage from "@/pages/joggers/ui/JoggersPage";
-import MenPage from "@/pages/men/ui/MenPage";
-import ShopPage from "@/pages/shop/ui/shop-page";
-import WomenPage from "@/pages/women/ui/WomenPage";
+import { CombosPage } from "@/pages/combos";
+import { JoggersPage } from "@/pages/joggers";
+import { MenPage } from "@/pages/men";
+
+import { ShopPage } from "@/pages/shop";
+import { WomenPage } from "@/pages/women";
+
 import { createBrowserRouter } from "react-router";
 
 export const routes = createBrowserRouter([
