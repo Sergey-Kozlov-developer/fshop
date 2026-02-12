@@ -10,7 +10,6 @@ const ShopPage = () => {
                 <div className="mb-24  max-sm:mt-14 sm:mt-20 lg:mt-32">
                     <PromoCards />
                 </div>
-
                 <PromoCollection />
             </div>
         </div>
