@@ -1,5 +1,12 @@
 import promoOne from "@/shared/assets/image/promo-card/promo-1.png";
 import promoTwo from "@/shared/assets/image/promo-card/promo-2.png";
+import { Button } from "@/shared/ui/shadcn/button";
+import {
+    Card,
+    CardDescription,
+    CardFooter,
+    CardTitle,
+} from "@/shared/ui/shadcn/card";
 
 const PromoCards = () => {
     const promoCard = [
@@ -24,27 +31,32 @@ const PromoCards = () => {
     return (
         <div className="grid justify-between md:grid-cols-2 sm:grid-cols-1 gap-x-7 sm:gap-y-7 max-sm:gap-y-7">
             {promoCard.map((item) => (
-                <div key={item.id} className="relative max-sm:mx-5 ">
+                <Card key={item.id} className="relative max-sm:mx-5 py-0">
                     <img
-                        className="rounded-xl shadow-[2px_2px_10px_2px_rgba(0,0,0,0.40)]"
                         src={item.img}
-                        alt="Promo 1"
+                        alt="Event cover"
+                        className="rounded-xl object-cover shadow-[2px_2px_10px_2px_rgba(0,0,0,0.40)]"
                     />
                     <div className="absolute justify-start max-sm:top-8 sm:top-16 md:top-6 lg:top-16 xl:top-32 left-7 ">
-                        <p className="max-sm:mb-2.5 mb-6 text-white text-lg font-extrabold font-['Montserrat'] leading-8 tracking-tight">
+                        <CardDescription className="max-sm:mb-2.5 mb-6 text-white text-lg font-extrabold font-['Montserrat'] leading-8 tracking-tight">
                             {item.article}
-                        </p>
-                        <p className="mb-2 text-white text-4xl font-extrabold font-['Core_Sans_C'] max-sm:text-2xl md:text-4xl leading-10">
+                        </CardDescription>
+                        <CardTitle className="mb-2 text-white text-4xl font-extrabold font-['Core_Sans_C'] max-sm:text-2xl md:text-4xl leading-10">
                             {item.title}
-                        </p>
-                        <p className="max-sm:mb-2 max-md:mb-2  text-white text-base font-medium font-['Core_Sans_C']  leading-6 tracking-tight">
-                            {item.promoPrice}
-                        </p>
-                        <p className=" text-white text-xl font-extrabold font-['Core_Sans_C'] underline leading-8">
-                            {item.linkItem}
-                        </p>
+                        </CardTitle>
+                        <CardDescription className="max-sm:mb-2.5 mb-6 text-white text-lg font-extrabold font-['Montserrat'] leading-8 tracking-tight">
+                            {item.article}
+                        </CardDescription>
+                        <CardFooter className="px-0 items-start">
+                            <Button
+                                variant="link"
+                                className="text-white text-xl font-extrabold font-['Core_Sans_C'] underline p-0"
+                            >
+                                View Event
+                            </Button>
+                        </CardFooter>
                     </div>
-                </div>
+                </Card>
             ))}
         </div>
     );
