@@ -19,9 +19,9 @@ import { MenuIcon } from "lucide-react";
 export const Header = () => {
     const navs = [
         { id: 1, path: "/", title: "Shop" },
-        { id: 2, path: "/men", title: "Men" },
-        { id: 3, path: "/women", title: "Women" },
-        { id: 4, path: "/combos", title: "Combos" },
+        { id: 2, path: "/combos", title: "Combos" },
+        { id: 3, path: "/men", title: "Men" },
+        { id: 4, path: "/women", title: "Women" },
         { id: 5, path: "/joggers", title: "Joggers" },
     ];
     const btns = [
