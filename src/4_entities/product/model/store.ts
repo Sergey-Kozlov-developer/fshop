@@ -30,12 +30,6 @@ export const useProductStore = create<ProductStore>()(
                     );
                 }
             },
-            // reset: () =>
-            //     set(
-            //         { users: [], isLoading: false, error: null },
-            //         false,
-            //         "reset"
-            //     ),
         }),
         { name: "ProductEntity" }
     )

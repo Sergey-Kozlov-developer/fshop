@@ -1,4 +1,4 @@
-export interface Product {
+export interface IProduct {
     id: number;
     title: string;
     price: number;
@@ -10,13 +10,13 @@ export interface Product {
         count: number;
     };
 }
-export interface ProductState {
-    products: Product[];
+export interface IProductState {
+    products: IProduct[];
     isLoading: boolean;
     error: string | null;
 }
-export interface ProductActions {
+export interface IProductActions {
     fetchProducts: () => Promise<void>;
 }
 
-export type ProductStore = ProductState & ProductActions;
+export type ProductStore = IProductState & IProductActions;

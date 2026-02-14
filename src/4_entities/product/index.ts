@@ -1,2 +1,2 @@
 export { useProductStore } from "./model/store";
-export type { Product, ProductStore } from "./model/types";
+export type { IProduct, ProductStore } from "./model/types";
