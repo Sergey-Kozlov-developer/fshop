@@ -1,16 +1,9 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
+import { api } from "@/5_shared/api/fake-store";
+import type { ProductStore } from "./types";
 
-interface StoreState {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    products: any[];
-    isLoading: boolean;
-    error: string | null;
-    fetchProducts: () => Promise<void>;
-    // reset: () => void;
-}
-
-export const useStoreStore = create<StoreState>()(
+export const useProductStore = create<ProductStore>()(
     devtools(
         (set) => ({
             products: [],
@@ -20,26 +13,20 @@ export const useStoreStore = create<StoreState>()(
                 set(
                     { isLoading: true, error: null },
                     false,
-                    "fetchdata/pending"
+                    "products/fetch/pending"
                 );
                 try {
-                    const response = await fetch(
-                        "https://fakestoreapi.com/products"
-                    );
-                    if (!response.ok) throw new Error("Failed to fetch");
-                    const data = await response.json();
-                    console.log(data);
-
+                    const data = await api.getProducts();
                     set(
                         { products: data, isLoading: false },
                         false,
-                        "fetchdata/fulfilled"
+                        "products/fetch/fulfilled"
                     );
                 } catch (error) {
                     set(
                         { error: (error as Error).message, isLoading: false },
                         false,
-                        "fetchdata/rejected"
+                        "products/fetch/rejected"
                     );
                 }
             },
@@ -50,6 +37,6 @@ export const useStoreStore = create<StoreState>()(
             //         "reset"
             //     ),
         }),
-        { name: "StoreStore" }
+        { name: "ProductEntity" }
     )
 );

@@ -1,4 +1,4 @@
-import { FilteredProducts } from "@/2_widgets/filtered-products";
+import { ProductsCatalog } from "@/2_widgets/products-catalog";
 import { ProductFilteringSettings } from "@/2_widgets/product-filtering-settings";
 
 export const CombosPage = () => {
@@ -6,7 +6,7 @@ export const CombosPage = () => {
         <div className="container mx-auto">
             <div className="grid grid-cols-[1fr_4fr]">
                 <ProductFilteringSettings />
-                <FilteredProducts />
+                <ProductsCatalog />
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import { useStoreStore } from "@/0_app/store/store";
+import { useProductStore } from "@/4_entities/product";
 import { Badge } from "@/5_shared/ui/shadcn/badge";
 import { Button } from "@/5_shared/ui/shadcn/button";
 import {
@@ -11,12 +11,15 @@ import {
 } from "@/5_shared/ui/shadcn/card";
 import { useEffect } from "react";
 
-export const FilteredProducts = () => {
-    const { products, fetchProducts } = useStoreStore();
+export const ProductsCatalog = () => {
+    const { products, fetchProducts, isLoading, error } = useProductStore();
 
     useEffect(() => {
         fetchProducts();
     }, []);
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div className="flex flex-col gap-12">

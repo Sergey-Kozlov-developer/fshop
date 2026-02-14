@@ -15,8 +15,9 @@ import { Button } from "@/5_shared/ui/shadcn/button";
 import logo from "@/5_shared/assets/image/logo.png";
 import HamburgerMenu from "@/5_shared/ui/humburger/hamburger";
 import { MenuIcon } from "lucide-react";
+import { memo } from "react";
 
-export const Header = () => {
+export const Header = memo(() => {
     const navs = [
         { id: 1, path: "/", title: "Shop" },
         { id: 2, path: "/combos", title: "Combos" },
@@ -111,4 +112,4 @@ export const Header = () => {
             </div>
         </header>
     );
-};
+});
